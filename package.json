@@ -9,6 +9,9 @@
   "author": "",
   "license": "ISC",
   "description": "",
+  "scripts": {
+    "start": "node bot.js"
+  },
   "dependencies": {
     "dotenv": "^16.4.7",
     "express": "^4.21.2",
