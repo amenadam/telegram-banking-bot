@@ -36,7 +36,17 @@ const saveData = (data) => {
 bot.start((ctx) =>
   ctx.reply("Welcome! Use /deposit <amount> or /withdraw <amount>.")
 );
+bot.command("help", (ctx) => {
+  ctx.reply(
+    "How to use this bot. \n  /deposit <amount> - to deposit \n /withdraw <amount> - to withdraw \n /statement_pdf - to get mini statement \n /balance - to check the balance"
+  );
+});
 
+bot.command("about", (ctx) => {
+  ctx.reply(
+    "this bot is developed by @aminadam_solomon /n check him on github https://github.com/amenadam"
+  );
+});
 bot.command("deposit", (ctx) => {
   let chatId = ctx.chat.id;
   let amount = parseFloat(ctx.message.text.split(" ")[1]);
